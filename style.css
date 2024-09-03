@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+    text-align: center;
+    background: url(Media/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0.5em;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    margin: 0.5em;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    width: 500px;
+    border: 1px solid #555;
+}
+
+#restart {
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#restart:hover {
+    background-color: #476072;
+    color: #0f3460;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Board Styles */
+#board {
+    width: 400px;
+    height: 400px;
+    background-color: #333;
+    border: 6px solid #000;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: 0 0 20px #000;
+}
+
+.tile {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #444;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Modern Color Scheme */
+.x2 { background-color: #334756; }
+.x4 { background-color: #476072; }
+.x8 { background-color: #3f4d67; color: #fff; }
+.x16 { background-color: #283655; color: #fff; }
+.x32 { background-color: #1a1a2e; color: #fff; }
+.x64 { background-color: #16213e; color: #fff; }
+.x128 { background-color: #0f3460; color: #fff; }
+.x256 { background-color: #0e0e52; color: #fff; }
+.x512 { background-color: #5c2a9d; color: #fff; }
+.x1024 { background-color: #892cdc; color: #fff; }
+.x2048 { background-color: #57007e; color: #fff; }
+.x4096 { background-color: #120136; color: #fff; }
+.x8192 { background-color: #380036; color: #fff; }
+
+
+
+/* Canvas Styling */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+}
