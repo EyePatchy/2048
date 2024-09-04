@@ -2,6 +2,7 @@ var board;
 var score = 0;
 var rows = 4;
 var columns = 4;
+var isMoving = false;
 
 window.onload = function() {
     setGame();
@@ -51,20 +52,29 @@ function updateTile(tile, num) {
 }
 
 document.addEventListener('keyup', (e) => {
+    if (isMoving) return;
+    isMoving = true;
+
+    let boardBeforeMove = JSON.stringify(board);
+
     if (e.code === "ArrowLeft") {
         slideLeft();
-        setTwo();
     } else if (e.code === "ArrowRight") {
         slideRight();
-        setTwo();
     } else if (e.code === "ArrowUp") {
         slideUp();
-        setTwo();
     } else if (e.code === "ArrowDown") {
         slideDown();
-        setTwo();
     }
-    document.getElementById("score").innerText = score;
+
+    let boardAfterMove = JSON.stringify(board);
+
+    if (boardBeforeMove !== boardAfterMove) {
+        setTwo();
+        document.getElementById("score").innerText = score;
+    }
+
+    isMoving = false;
 })
 
 function filterZero(row) {
