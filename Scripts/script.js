@@ -32,7 +32,6 @@ function setGame() {
 }
 
 function resetGame() {
-    // Clear the board
     document.getElementById("board").innerHTML = "";
     score = 0;
     document.getElementById("score").innerText = score;
