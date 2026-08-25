@@ -19,3 +19,8 @@ Welcome to the Billie Eilish-themed 2048 Puzzle Game! This project reimagines th
    ```bash
    git clone <repository-url>
 - Visit eyepatchy.github.io/2048
+
+
+## License
+
+The source code of this project is licensed under the MIT License. Third-party media, including Billie Eilish-related artwork and music, is not owned by the author and is not covered by this license.
